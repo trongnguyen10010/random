@@ -69,13 +69,13 @@ d-i netcfg/choose_interface select auto
 # Any hostname and domain names assigned from dhcp take precedence over
 # values set here. However, setting the values still prevents the questions
 # from being shown, even if values come from dhcp.
-d-i netcfg/get_hostname string i7-4790l
-d-i netcfg/get_domain string notlocal
+d-i netcfg/get_hostname string utestduh
+d-i netcfg/get_domain string whatdomain
 
 # If you want to force a hostname, regardless of what either the DHCP
 # server returns or what the reverse DNS entry for the IP is, uncomment
 # and adjust the following line.
-d-i netcfg/hostname string i7-4790l
+#d-i netcfg/hostname string somehost
 
 # Disable that annoying WEP key dialog.
 d-i netcfg/wireless_wep string
@@ -100,16 +100,16 @@ d-i netcfg/wireless_wep string
 
 ### Mirror settings
 # If you select ftp, the mirror/country string does not need to be set.
-#d-i mirror/protocol string ftp
-d-i mirror/country string manual
-d-i mirror/http/hostname string archive.ubuntu.com
-d-i mirror/http/directory string /ubuntu
-d-i mirror/http/proxy string
+d-i mirror/protocol string ftp
+#d-i mirror/country string manual
+#d-i mirror/http/hostname string archive.ubuntu.com
+#d-i mirror/http/directory string /ubuntu
+#d-i mirror/http/proxy string
 
 # Alternatively: by default, the installer uses CC.archive.ubuntu.com where
 # CC is the ISO-3166-2 code for the selected country. You can preseed this
 # so that it does so without asking.
-d-i mirror/http/mirror select us.archive.ubuntu.com
+#d-i mirror/http/mirror select CC.archive.ubuntu.com
 
 # Suite to install.
 #d-i mirror/suite string xenial
@@ -130,21 +130,22 @@ d-i mirror/http/mirror select us.archive.ubuntu.com
 #d-i passwd/root-password password r00tme
 #d-i passwd/root-password-again password r00tme
 # or encrypted using a crypt(3)  hash.
-#d-i passwd/root-password-crypted password [crypt(3) hash]
+d-i passwd/root-password-crypted password $6$pWQKfrGA$gwBGmN8JmmnRlScYrxII1eTwESaZlrUC/zLOhO7p7NLBLCNLNkY2gVAkzbxxxlUxLY6N2taf97eNMxIEwdH0z0
+# use mkpasswd to generate password hash
 
 # To create a normal user account.
-d-i passwd/user-fullname string ttn
-#d-i passwd/username string ubuntu
+d-i passwd/user-fullname string Ubuntu User
+d-i passwd/username string ubunto
 # Normal user's password, either in clear text
 #d-i passwd/user-password password insecure
 #d-i passwd/user-password-again password insecure
 # or encrypted using a crypt(3) hash.
-d-i passwd/user-password-crypted password SWEnBNyfxROOc ################################################################################## insert password here
+d-i passwd/user-password-crypted password $6$ENUife0QAPV$apY7uiEvbbVKVHvdYDNyWKLNCKQog/ynZV5hNbTuxxxxNA.tOsUoixtOpOsDWZ9VezSjwSAi8zYc9xz0jp9G1
 # Create the first user with the specified UID instead of the default.
 #d-i passwd/user-uid string 1010
 # The installer will warn about weak passwords. If you are sure you know
 # what you're doing and want to override it, uncomment this.
-d-i user-setup/allow-password-weak boolean true
+#d-i user-setup/allow-password-weak boolean true
 
 # The user account will be added to some standard initial groups. To
 # override that, use this.
@@ -178,7 +179,7 @@ d-i clock-setup/ntp boolean true
 # name must be given in traditional, non-devfs format (so e.g. /dev/sda
 # and not e.g. /dev/discs/disc0/disc).
 # For example, to use the first SCSI/SATA hard disk:
-d-i partman-auto/disk string /dev/sda
+#d-i partman-auto/disk string /dev/sda
 # In addition, you'll need to specify the method to use.
 # The presently available methods are:
 # - regular: use the usual partition types for your architecture
@@ -235,7 +236,7 @@ d-i partman-auto/choose_recipe select atomic
 
 # If you just want to change the default filesystem from ext3 to something
 # else, you can do that without providing a full recipe.
-d-i partman/default_filesystem string ext4
+#d-i partman/default_filesystem string ext4
 
 # The full recipe format is documented in the file partman-auto-recipe.txt
 # included in the 'debian-installer' package or available from D-I source
@@ -328,12 +329,12 @@ d-i partman/confirm_nooverwrite boolean true
 #d-i apt-setup/universe boolean true
 #d-i apt-setup/backports boolean true
 # Uncomment this if you don't want to use a network mirror.
-#d-i apt-setup/use_mirror boolean false
+d-i apt-setup/use_mirror boolean false
 # Select which update services to use; define the mirrors to be used.
 # Values shown below are the normal defaults.
-d-i apt-setup/services-select multiselect security
-d-i apt-setup/security_host string security.ubuntu.com
-d-i apt-setup/security_path string /ubuntu
+#d-i apt-setup/services-select multiselect security
+#d-i apt-setup/security_host string security.ubuntu.com
+#d-i apt-setup/security_path string /ubuntu
 
 # Additional repositories, local[0-9] available
 #d-i apt-setup/local0/repository string \
@@ -361,10 +362,10 @@ tasksel tasksel/first multiselect ubuntu-desktop
 #tasksel tasksel/first multiselect kubuntu-desktop
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server build-essential
+#d-i pkgsel/include string openssh-server build-essential
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
-d-i pkgsel/upgrade select none
+#d-i pkgsel/upgrade select none
 
 # Language pack selection
 #d-i pkgsel/language-packs multiselect de, en, zh
@@ -372,18 +373,18 @@ d-i pkgsel/upgrade select none
 # Policy for applying updates. May be "none" (no automatic updates),
 # "unattended-upgrades" (install security updates automatically), or
 # "landscape" (manage system with Landscape).
-d-i pkgsel/update-policy select unattended-upgrades
+#d-i pkgsel/update-policy select none
 
 # Some versions of the installer can report back on what software you have
 # installed, and what software you use. The default is not to report back,
 # but sending reports helps the project determine what software is most
 # popular and include it on CDs.
-popularity-contest popularity-contest/participate boolean false
+#popularity-contest popularity-contest/participate boolean false
 
 # By default, the system's locate database will be updated after the
 # installer has finished installing most packages. This may take a while, so
 # if you don't want it, you can set this to "false" to turn it off.
-d-i pkgsel/updatedb boolean false
+#d-i pkgsel/updatedb boolean true
 
 ### Boot loader installation
 # Grub is the default boot loader (for x86). If you want lilo installed
@@ -400,7 +401,7 @@ d-i grub-installer/only_debian boolean true
 
 # This one makes grub-installer install to the MBR if it also finds some other
 # OS, which is less safe as it might not be able to boot that other OS.
-d-i grub-installer/with_other_os boolean true
+#d-i grub-installer/with_other_os boolean true
 
 # Due notably to potential USB sticks, the location of the MBR can not be
 # determined safely in general, so this needs to be specified:
@@ -438,7 +439,7 @@ d-i finish-install/reboot_in_progress note
 
 # This will prevent the installer from ejecting the CD during the reboot,
 # which is useful in some situations.
-d-i cdrom-detect/eject boolean false
+#d-i cdrom-detect/eject boolean false
 
 # This is how to make the installer shutdown when finished, but not
 # reboot into the installed system.
