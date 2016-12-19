@@ -1,0 +1,107 @@
+Initial blacklisted packages: 
+Initial whitelisted packages: 
+Starting unattended upgrades script
+Allowed origins are: ['o=Ubuntu,a=xenial', 'o=Ubuntu,a=xenial-security', 'o=Ubuntu,a=xenial-updates']
+Checking: ifupdown ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools-bin ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools-core ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: isc-dhcp-client ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: isc-dhcp-common ([<Origin component:'main' archive:'xenial-updates' origin:'Ubuntu' label:'Ubuntu' site:'us.archive.ubuntu.com' isTrusted:True>])
+Checking: libsmbclient ([<Origin component:'main' archive:'xenial-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libwbclient0 ([<Origin component:'main' archive:'xenial-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: samba-libs ([<Origin component:'main' archive:'xenial-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+pkgs that look like they should be upgraded: ifupdown
+initramfs-tools
+initramfs-tools-bin
+initramfs-tools-core
+isc-dhcp-client
+isc-dhcp-common
+libsmbclient
+libwbclient0
+samba-libs
+Get:1 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-libs amd64 2:4.3.11+dfsg-0ubuntu0.16.04.3 [5168 kB]                                             
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]                                                             
+Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 initramfs-tools all 0.122ubuntu8.7 [8640 B]                                                          
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 initramfs-tools-core all 0.122ubuntu8.7 [42.6 kB]                                                    
+Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 initramfs-tools-bin amd64 0.122ubuntu8.7 [9652 B]                                                    
+Get:6 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.6 [223 kB]                                                     
+Get:7 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.6 [105 kB]                                                     
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 libwbclient0 amd64 2:4.3.11+dfsg-0ubuntu0.16.04.3 [30.4 kB]                                           
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/main amd64 libsmbclient amd64 2:4.3.11+dfsg-0ubuntu0.16.04.3 [53.1 kB]                                           
+Fetched 5696 kB in 0s (0 B/s)                                                                                                                                            
+fetch.run() result: 0
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 5168496 DestFile:'/var/cache/apt/archives/samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/s/samba/samba-libs_4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' ID:1 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb')
+found pkg: samba-libs
+No conffiles in deb '/var/cache/apt/archives/samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 30400 DestFile:'/var/cache/apt/archives/libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/s/samba/libwbclient0_4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' ID:8 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb')
+found pkg: libwbclient0
+No conffiles in deb '/var/cache/apt/archives/libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 53102 DestFile:'/var/cache/apt/archives/libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/s/samba/libsmbclient_4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' ID:9 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb')
+found pkg: libsmbclient
+No conffiles in deb '/var/cache/apt/archives/libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb' (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 54866 DestFile:'/var/cache/apt/archives/ifupdown_0.8.10ubuntu1.2_amd64.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/ifupdown/ifupdown_0.8.10ubuntu1.2_amd64.deb' ID:2 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/ifupdown_0.8.10ubuntu1.2_amd64.deb')
+found pkg: ifupdown
+conffile line: '/etc/default/networking 35cd4a2713981c9239ce4532c1bfc1c7'
+current md5: 35cd4a2713981c9239ce4532c1bfc1c7
+conffile line: '/etc/init.d/networking 2c98e17c0d329b6451685ebbd0c14f81'
+current md5: 2c98e17c0d329b6451685ebbd0c14f81
+conffile line: '/etc/init/network-interface-container.conf 4daa570594afc50940f140a7731d20d1'
+current md5: 4daa570594afc50940f140a7731d20d1
+conffile line: '/etc/init/network-interface-security.conf feb6b4b52fe24c44ff1bc68addf245d6'
+current md5: feb6b4b52fe24c44ff1bc68addf245d6
+conffile line: '/etc/init/network-interface.conf aae12345eba8e946579b06798b1752c1'
+current md5: aae12345eba8e946579b06798b1752c1
+conffile line: '/etc/init/networking.conf c50811e19bcd596d99b0467b40cfbb8b'
+current md5: c50811e19bcd596d99b0467b40cfbb8b
+conffile line: '/etc/network/if-down.d/upstart 1a0205ddbc1446782a8d4d818e97d8a5'
+current md5: 1a0205ddbc1446782a8d4d818e97d8a5
+conffile line: '/etc/network/if-up.d/upstart dfbcde4fd4a3a2553930605e03e160ab'
+current md5: dfbcde4fd4a3a2553930605e03e160ab
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 8640 DestFile:'/var/cache/apt/archives/initramfs-tools_0.122ubuntu8.7_all.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools_0.122ubuntu8.7_all.deb' ID:3 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/initramfs-tools_0.122ubuntu8.7_all.deb')
+found pkg: initramfs-tools
+conffile line: '/etc/initramfs-tools/update-initramfs.conf e2026d4603e7161efaccca519aeb1297'
+current md5: e2026d4603e7161efaccca519aeb1297
+conffile line: '/etc/kernel/postinst.d/initramfs-tools 1d77d3e4b57c3da299aacd44b1dc207c'
+current md5: 1d77d3e4b57c3da299aacd44b1dc207c
+conffile line: '/etc/kernel/postrm.d/initramfs-tools f57d0b03f79fd46dd1a1fa3b00206070'
+current md5: f57d0b03f79fd46dd1a1fa3b00206070
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 42570 DestFile:'/var/cache/apt/archives/initramfs-tools-core_0.122ubuntu8.7_all.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools-core_0.122ubuntu8.7_all.deb' ID:4 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/initramfs-tools-core_0.122ubuntu8.7_all.deb')
+found pkg: initramfs-tools-core
+conffile line: '/etc/initramfs-tools/initramfs.conf 444437d425d5d06214685b7af7f86e24'
+current md5: 444437d425d5d06214685b7af7f86e24
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 9652 DestFile:'/var/cache/apt/archives/initramfs-tools-bin_0.122ubuntu8.7_amd64.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools-bin_0.122ubuntu8.7_amd64.deb' ID:5 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/initramfs-tools-bin_0.122ubuntu8.7_amd64.deb')
+found pkg: initramfs-tools-bin
+No conffiles in deb '/var/cache/apt/archives/initramfs-tools-bin_0.122ubuntu8.7_amd64.deb' (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 223476 DestFile:'/var/cache/apt/archives/isc-dhcp-client_4.3.3-5ubuntu12.6_amd64.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/isc-dhcp/isc-dhcp-client_4.3.3-5ubuntu12.6_amd64.deb' ID:6 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/isc-dhcp-client_4.3.3-5ubuntu12.6_amd64.deb')
+found pkg: isc-dhcp-client
+conffile line: '/etc/apparmor.d/sbin.dhclient 03efd29a659b09117c6125c416856d29'
+current md5: 03efd29a659b09117c6125c416856d29
+conffile line: '/etc/dhcp/debug 521717b5f9e08db15893d3d062c59aeb'
+current md5: 521717b5f9e08db15893d3d062c59aeb
+conffile line: '/etc/dhcp/dhclient-exit-hooks.d/rfc3442-classless-routes 95e21c32fa7f603db75f1dc33db53cf5'
+current md5: 95e21c32fa7f603db75f1dc33db53cf5
+conffile line: '/etc/dhcp/dhclient.conf c3b6c3271031ab8e250a192f4eb18695'
+current md5: c3b6c3271031ab8e250a192f4eb18695
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 104632 DestFile:'/var/cache/apt/archives/isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb' DescURI: 'http://us.archive.ubuntu.com/ubuntu/pool/main/i/isc-dhcp/isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb' ID:7 ErrorText: ''>
+check_conffile_prompt('/var/cache/apt/archives/isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb')
+found pkg: isc-dhcp-common
+No conffiles in deb '/var/cache/apt/archives/isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb' (There is no member named 'conffiles')
+blacklist: []
+whitelist: []
+Option --dry-run given, *not* performing real actions
+Packages that will be upgraded: ifupdown initramfs-tools initramfs-tools-bin initramfs-tools-core isc-dhcp-client isc-dhcp-common libsmbclient libwbclient0 samba-libs
+Writing dpkg log to '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log'
+/usr/bin/dpkg --status-fd 9 --unpack --auto-deconfigure /var/cache/apt/archives/samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb /var/cache/apt/archives/libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb /var/cache/apt/archives/libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.3_amd64.deb /var/cache/apt/archives/ifupdown_0.8.10ubuntu1.2_amd64.deb /var/cache/apt/archives/initramfs-tools_0.122ubuntu8.7_all.deb /var/cache/apt/archives/initramfs-tools-core_0.122ubuntu8.7_all.deb /var/cache/apt/archives/initramfs-tools-bin_0.122ubuntu8.7_amd64.deb /var/cache/apt/archives/isc-dhcp-client_4.3.3-5ubuntu12.6_amd64.deb /var/cache/apt/archives/isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb 
+/usr/bin/dpkg --status-fd 11 --configure libwbclient0:amd64 samba-libs:amd64 libsmbclient:amd64 ifupdown:amd64 initramfs-tools-bin:amd64 initramfs-tools-core:all initramfs-tools:all isc-dhcp-client:amd64 isc-dhcp-common:amd64 
+/usr/bin/dpkg --status-fd 13 --configure --pending 
+All upgrades installed
+InstCount=0 DelCount=0 BrokenCount=0
