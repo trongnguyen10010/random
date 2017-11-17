@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo apt-get remove docker docker-engine docker.io
+sudo apt-get remove docker docker-engine docker.io -y
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get install -y\
      apt-transport-https \
      ca-certificates \
      curl \
@@ -14,6 +14,6 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-get update
-sudo apt-get install docker-ce
+sudo apt-get install docker-ce -y
 sudo groupadd docker
 sudo usermod -aG docker $USER
